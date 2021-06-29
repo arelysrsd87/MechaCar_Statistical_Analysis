@@ -5,9 +5,9 @@ library(dplyr)
 library(tidyverse)
 mecha_mpg <- read.csv(file='MechaCar_mpg.csv',check.names=F,stringsAsFactors = F) 
 
-lm(mpg ~ vehicle_length + vehicle_weight + spoiler_angle + ground_clearance + AWD, data=mecha_mpg)
+mecha_lm <- lm(mpg ~ vehicle_length + vehicle_weight + spoiler_angle + ground_clearance + AWD, data=mecha_mpg)
 
-summary(lm(mpg ~ vehicle_length + vehicle_weight + spoiler_angle + ground_clearance + AWD, data=mecha_mpg))
+summary(mecha_lm)
 
 # Deliverable 2
 
@@ -16,14 +16,14 @@ mecha_coil <- read.csv(file='Suspension_Coil.csv',check.names=F,stringsAsFactors
 total_summary <- mecha_coil %>% summarize(Mean_PSI=mean(PSI),
                                           Median_PSI=median(PSI),
                                           Var_PSI=var(PSI),
-                                          Std_Dev_PSI=sd(PSI),
-                                          Num_Coil=n(), .groups = 'keep') 
+                                          Std_Dev_PSI=sd(PSI))
+                                         
 
 lot_summary <- mecha_coil  %>% group_by(Manufacturing_Lot) %>% summarize(Mean_PSI=mean(PSI),
                                                                          Median_PSI=median(PSI),
                                                                          Var_PSI=var(PSI),
                                                                          Std_Dev_PSI=sd(PSI),
-                                                                         Num_Coil=n(), .groups = 'keep') 
+                                                                         .groups = 'keep') 
 
 # Deliverable 3
 
