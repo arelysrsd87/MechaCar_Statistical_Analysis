@@ -20,7 +20,23 @@ The design specifications for the MechaCar suspension coils dictate that the var
 - Lot 3 has the sample mean is 1496.14 and the p-Value is 0.04, which is lower than the common significance level of 0.05. All indicate to reject the null hypothesis that this sample mean and the presumed population mean are not statistically different.
 ## Study Design: MechaCar vs Competition
 Write a short description of a statistical study that can quantify how the MechaCar performs against the competition. In your study design, think critically about what metrics would be of interest to a consumer: for a few examples, cost, city or highway fuel efficiency, horse power, maintenance cost, or safety rating.
-- What metric or metrics are you going to test?
-- What is the null hypothesis or alternative hypothesis?
-- What statistical test would you use to test the hypothesis? And why?
-- What data is needed to run the statistical test?
+
+Collecting data for comparable models across all major manufacturers for past 3 years for the following metrics:
+- Safety Feature Rating: Independent Variable
+- Current Price (Selling): Dependent Variable
+- Drive Package : Independent Variable
+- Engine (Electric, Hybrid, Gasoline / Conventional): Independent Variable
+- Resale Value: Independent Variable
+- Average Annual Cost of ownership (Maintenance): Independent Variable
+- MPG (Gasoline Efficiency): Independent Variable
+
+- Null Hypothesis (H0): MechaCar is priced correctly based on its performance of key factors for its genre.
+- Alternative Hypothesis (Ha): MechaCar is NOT priced correctly based on performance of key factors for its genre.
+
+- A multiple linear regression could be used to determine the factors that have the highest correlation/predictability with the list selling price (dependent variable) and which combination has the greatest impact on price.
+
+This study would involve collecting data on MechaCar and it's comparable models across several different manufacturers over the last 3 years:
+- What are the competitions' comparable models
+- Which cars will MechaCar be competing with head-to-head? 
+- Which cars will be included in the study?
+- Which factors will look at the study to determine the relevant to selling price?
